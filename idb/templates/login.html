@@ -1,0 +1,22 @@
+<!--login page template to test back end-->
+<form method="POST" action="">
+    {{ form.hidden_tag() }}
+    <fieldset class="form-group">
+
+        {{ form.email.label(class="form-control-label") }}
+        {{ form.email(class="form-control form-control-lg") }}
+        <br>
+        {{ form.password.label(class="form-control-label") }}
+        {{ form.password(class="form-control form-control-lg") }}
+
+    </fieldset>
+    {{ form.submit(class="btn btn-outline-info") }}
+</form>
+
+<small class="text-muted">
+    Need account? <a class="ml-2" href="{{ url_for('register') }}">Register</a>
+</small>
+<br>
+<small class="text-muted">
+    <a href="#">Forgot password?</a>
+</small>
