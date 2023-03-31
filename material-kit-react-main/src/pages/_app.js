@@ -27,7 +27,7 @@ const App = (props) => {
     <CacheProvider value={emotionCache}>
       <Head>
         <title>
-          UTD IDB
+          UTD Intelligent Discussion Board
         </title>
         <meta
           name="viewport"
