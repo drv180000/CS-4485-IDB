@@ -1,10 +1,10 @@
 from transformers import pipeline
 from PyPDF2 import PdfReader
 
-question = "Whats the professors email?"
+question = "What is the name of the class?"
 
 # Path to pdf
-reader = PdfReader('/Users/angelogonzales/Desktop/CS Project/.venv/Syllabus.pdf')
+reader = PdfReader('/Users/Nick/Desktop/Syllabus.pdf')
 page_count = len(reader.pages) 
 context = ''
 

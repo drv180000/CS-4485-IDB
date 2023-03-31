@@ -4,7 +4,7 @@
 from datasets import load_dataset
 from transformers import AutoTokenizer, DefaultDataCollator, AutoModelForQuestionAnswering, TrainingArguments, Trainer, pipeline, AutoModelForDocumentQuestionAnswering
 
-# access_token = 'ACCESS TOKEN FROM HUGGING FACE ACCOUNT'
+# access_token = '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'
 
 def preprocess_function(examples):
     questions = [q.strip() for q in examples["question"]]
