@@ -79,21 +79,22 @@ export const Layout = (props) => {
               }}
               variant="h1"
             >
-              Welcome to{' '}
+              Welcome to The{' '}
               <Box
                 component="a"
                 sx={{ color: '#15B79E' }}
                 target="_blank"
               >
-                Devias Kit
+                UTD
               </Box>
+              IDB
             </Typography>
             <Typography
               align="center"
               sx={{ mb: 3 }}
               variant="subtitle1"
             >
-              A professional kit that comes with ready-to-use MUI components.
+              An easy-to-use intelligent discussion board for students.
             </Typography>
             <img
               alt=""
