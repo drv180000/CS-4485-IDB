@@ -59,7 +59,7 @@ export const Layout = (props) => {
           lg={6}
           sx={{
             alignItems: 'center',
-            background: 'radial-gradient(50% 50% at 50% 50%, #122647 0%, #090E23 100%)',
+            background: 'radial-gradient(50% 50% at 50% 50%, #323333 0%, #4e4f4f 100%)',
             color: 'white',
             display: 'flex',
             justifyContent: 'center',
@@ -82,10 +82,10 @@ export const Layout = (props) => {
               Welcome to The{' '}
               <Box
                 component="a"
-                sx={{ color: '#15B79E' }}
+                sx={{ color: '#e87500' }}
                 target="_blank"
               >
-                UTD
+                UTD{' '}
               </Box>
               IDB
             </Typography>
@@ -98,7 +98,7 @@ export const Layout = (props) => {
             </Typography>
             <img
               alt=""
-              src="/assets/utdallas_min.png"
+              src="/assets/utd_logo.png"
             />
           </Box>
         </Grid>
