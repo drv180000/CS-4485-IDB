@@ -181,6 +181,12 @@ const Page = () => {
   const customersIds = useCustomerIds(customers);
   const customersSelection = useSelection(customersIds);
 
+  const [value, setValue] = useState('');
+  const handleTextChange = e => {
+    console.log(`Typed => ${e.target.value}`);
+    setValue(e.target.value);
+  };
+
   const handlePageChange = useCallback(
     (event, value) => {
       setPage(value);
@@ -261,6 +267,8 @@ const Page = () => {
               </div>
             </Stack>
             <CustomersSearch />
+            <TextField value={value} label='add text' variant='outlined' onChange={handleTextChange}/>
+
             <CustomersTable
               count={data.length}
               items={customers}
