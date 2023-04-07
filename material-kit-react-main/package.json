@@ -3,10 +3,12 @@
   "version": "3.0.0",
   "author": "Devias",
   "licence": "MIT",
-  "homepage": "https://devias.io",
+  "homepage": "https://drv180000.github.io/CS-4485-IDB/",
   "private": false,
   "scripts": {
     "dev": "next",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "next build",
     "start": "next start",
     "export": "next export",

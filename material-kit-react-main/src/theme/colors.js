@@ -20,16 +20,16 @@ export const neutral = {
   500: '#6C737F',
   600: '#4D5761',
   700: '#2F3746',
-  800: '#1C2536',
+  800: '#323333',
   900: '#111927'
 };
 
-export const indigo = withAlphas({
-  lightest: '#F5F7FF',
-  light: '#EBEEFE',
-  main: '#6366F1',
-  dark: '#4338CA',
-  darkest: '#312E81',
+export const orange = withAlphas({
+  lightest: '#f79028',
+  light: '#f7820a',
+  main: '#e87500',
+  dark: '#c46504',
+  darkest: '#a65402',
   contrastText: '#FFFFFF'
 });
 
