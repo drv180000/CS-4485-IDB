@@ -56,20 +56,15 @@ export const CustomersTable = (props) => {
                   />
                 </TableCell>
                 <TableCell>
-                  Name
+                  Class Name
                 </TableCell>
                 <TableCell>
-                  Email
+                  Section
                 </TableCell>
                 <TableCell>
-                  Location
+                  Professor
                 </TableCell>
-                <TableCell>
-                  Phone
-                </TableCell>
-                <TableCell>
-                  Signed Up
-                </TableCell>
+                
               </TableRow>
             </TableHead>
             <TableBody>
@@ -101,9 +96,7 @@ export const CustomersTable = (props) => {
                         direction="row"
                         spacing={2}
                       >
-                        <Avatar src={customer.avatar}>
-                          {getInitials(customer.name)}
-                        </Avatar>
+                        
                         <Typography variant="subtitle2">
                           {customer.name}
                         </Typography>
@@ -115,12 +108,7 @@ export const CustomersTable = (props) => {
                     <TableCell>
                       {customer.address.city}, {customer.address.state}, {customer.address.country}
                     </TableCell>
-                    <TableCell>
-                      {customer.phone}
-                    </TableCell>
-                    <TableCell>
-                      {createdAt}
-                    </TableCell>
+                    
                   </TableRow>
                 );
               })}

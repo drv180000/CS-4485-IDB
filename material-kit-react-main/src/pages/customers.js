@@ -1,10 +1,10 @@
 import { useCallback, useMemo, useState } from 'react';
 import Head from 'next/head';
-import { subDays, subHours } from 'date-fns';
+import { getTime, subDays, subHours } from 'date-fns';
 import ArrowDownOnSquareIcon from '@heroicons/react/24/solid/ArrowDownOnSquareIcon';
 import ArrowUpOnSquareIcon from '@heroicons/react/24/solid/ArrowUpOnSquareIcon';
 import PlusIcon from '@heroicons/react/24/solid/PlusIcon';
-import { Box, Button, Container, Stack, SvgIcon, Typography, TextField } from '@mui/material';
+import { Box, Button, Container, Stack, SvgIcon, Typography, TextField, Table, TableBody, TableRow, TableContainer, TableCell, Input } from '@mui/material';
 import { useSelection } from 'src/hooks/use-selection';
 import { Layout as DashboardLayout } from 'src/layouts/dashboard/layout';
 import { CustomersTable } from 'src/sections/customer/customers-table';
@@ -12,6 +12,15 @@ import { CustomersSearch } from 'src/sections/customer/customers-search';
 import { applyPagination } from 'src/utils/apply-pagination';
 
 const now = new Date();
+let time = now.toString();
+
+function createData(name, time, text){
+  return {name, time, text};
+}
+
+const questionData = [
+  createData('Bobert Robert', time, 'Lorem ipsum this is a question or something')
+];
 
 const data = [
   {
@@ -247,8 +256,41 @@ const Page = () => {
                 </Button>
               </div>
             </Stack>
-            <TextField value={value} label='add text' variant='outlined' onChange={handleTextChange}/>
+            
+            <TableContainer>
+              <Table >
+                <TableRow>
+                  
+                </TableRow>
+                <TableBody>
+                  <Box sx={{bgcolor:'#ebebeb', height:'fluid'}}>
+                    {questionData.map((row) => (
+                    <TableRow key={row.datePosted}>
+                      <Container>
+                        <Typography variant='h6'>{row.name}</Typography>
+                      </Container>
+                      <Container>
+                        <Typography variant='caption'>{row.time}</Typography>
+                      </Container>
+                      <Container>
+                        <Typography variant='body1'>{row.text}</Typography>
+                      </Container>
+                    </TableRow>
+                    ))}
+                  </Box>
+                  <TableRow>
+                    <Container>
+                      <form>
+                        <Input fullWidth multiline rows={4} margin="normal" value={value} label='add text' variant='outlined' onChange={handleTextChange}/>
+                        <Button type='submit' onClick={handleTextChange}>Submit</Button>
+                      </form>
+                    </Container>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </TableContainer>
 
+            <CustomersSearch />
             <CustomersTable
               count={data.length}
               items={customers}
