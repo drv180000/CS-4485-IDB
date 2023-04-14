@@ -1,0 +1,10 @@
+import pymongo
+
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+
+mydb = myclient["admin"]
+
+mycol = mydb["posts"]
+
+mydict = { "_id":  1, "title": "POST TITLE", "date": "POST DATE", "time": "POST TIME", "time_zone": "POST TIME ZONE", "author": "POST AUTHOR", "location": "POST LOCATION", "entry": "POST ENTRY"}
+x = mycol.insert_one(mydict)
