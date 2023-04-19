@@ -38,7 +38,7 @@ export const items = [
     )
   },
   {
-    title: 'Settings',
+    title: 'Discussion Posts',
     path: '/settings',
     icon: (
       <SvgIcon fontSize="small">
