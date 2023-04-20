@@ -12,7 +12,8 @@ import {
   TableHead,
   TablePagination,
   TableRow,
-  Typography
+  Typography,
+  Button
 } from '@mui/material';
 import { Scrollbar } from 'src/components/scrollbar';
 import { getInitials } from 'src/utils/get-initials';
@@ -79,16 +80,7 @@ export const CustomersTable = (props) => {
                     selected={isSelected}
                   >
                     <TableCell padding="checkbox">
-                      <Checkbox
-                        checked={isSelected}
-                        onChange={(event) => {
-                          if (event.target.checked) {
-                            onSelectOne?.(customer.id);
-                          } else {
-                            onDeselectOne?.(customer.id);
-                          }
-                        }}
-                      />
+                      <Button href='/settings' variant='outlined'></Button>
                     </TableCell>
                     <TableCell>
                       <Stack
@@ -103,10 +95,10 @@ export const CustomersTable = (props) => {
                       </Stack>
                     </TableCell>
                     <TableCell>
-                      {customer.email}
+                      {customer.classNum}
                     </TableCell>
                     <TableCell>
-                      {customer.address.city}, {customer.address.state}, {customer.address.country}
+                      {customer.prof}
                     </TableCell>
                     
                   </TableRow>
