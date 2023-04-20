@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Box, Container, Stack, Typography } from '@mui/material';
+import { Box, Container, Stack, TextField, Typography } from '@mui/material';
 import { SettingsNotifications } from 'src/sections/settings/settings-notifications';
 import { SettingsPassword } from 'src/sections/settings/settings-password';
 import { Layout as DashboardLayout } from 'src/layouts/dashboard/layout';
@@ -23,6 +23,9 @@ const Page = () => (
           <Typography variant="h4">
             Discussion Posts
           </Typography>
+          <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+          <TextField id="filled-basic" label="Filled" variant="filled" />
+          <TextField id="standard-basic" label="Standard" variant="standard" />
           <SettingsNotifications />
           <SettingsPassword />
         </Stack>
