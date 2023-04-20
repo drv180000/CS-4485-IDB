@@ -7,6 +7,7 @@ import UserPlusIcon from '@heroicons/react/24/solid/UserPlusIcon';
 import UsersIcon from '@heroicons/react/24/solid/UsersIcon';
 import XCircleIcon from '@heroicons/react/24/solid/XCircleIcon';
 import { SvgIcon } from '@mui/material';
+import MessageIcon from '@mui/icons-material/Message';
 
 export const items = [
   {
@@ -42,7 +43,7 @@ export const items = [
     path: '/settings',
     icon: (
       <SvgIcon fontSize="small">
-        <CogIcon />
+        <MessageIcon />
       </SvgIcon>
     )
   },
