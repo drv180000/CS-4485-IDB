@@ -44,17 +44,7 @@ export const CustomersTable = (props) => {
             <TableHead>
               <TableRow>
                 <TableCell padding="checkbox">
-                  <Checkbox
-                    checked={selectedAll}
-                    indeterminate={selectedSome}
-                    onChange={(event) => {
-                      if (event.target.checked) {
-                        onSelectAll?.();
-                      } else {
-                        onDeselectAll?.();
-                      }
-                    }}
-                  />
+                  
                 </TableCell>
                 <TableCell>
                   Class Name
@@ -80,7 +70,7 @@ export const CustomersTable = (props) => {
                     selected={isSelected}
                   >
                     <TableCell padding="checkbox">
-                      <Button href='/settings' variant='outlined'></Button>
+                      <Button href='/settings' variant='contained'></Button>
                     </TableCell>
                     <TableCell>
                       <Stack
