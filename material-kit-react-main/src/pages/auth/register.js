@@ -6,6 +6,7 @@ import * as Yup from 'yup';
 import { Box, Button, Link, Stack, TextField, Typography } from '@mui/material';
 import { useAuth } from 'src/hooks/use-auth';
 import { Layout as AuthLayout } from 'src/layouts/auth/layout';
+import { request } from 'http';
 
 const Page = () => {
   const router = useRouter();
@@ -15,7 +16,7 @@ const Page = () => {
       email: '',
       name: '',
       password: '',
-      submit: null
+      
     },
     validationSchema: Yup.object({
       email: Yup
@@ -35,10 +36,19 @@ const Page = () => {
     onSubmit: async (values, helpers) => {
       try {
         await auth.signUp(values.email, values.name, values.password);
+        const response = await fetch("http://127.0.0.1:5000/add_user", {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(values)
+        })
+        if(response.ok) {
+          console.log('response worked')
+        }
         router.push('/');
       } catch (err) {
         helpers.setStatus({ success: false });
-        helpers.setErrors({ submit: err.message });
         helpers.setSubmitting(false);
       }
     }

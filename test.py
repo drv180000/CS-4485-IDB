@@ -3,7 +3,7 @@ from PyPDF2 import PdfReader
 import nltk
 from nltk.corpus import stopwords
 import string
-from pymongo.mongo_client import MongoClient
+#from pymongo.mongo_client import MongoClient
 
 # # pw: 
 # # establish connection to MongoDB 
