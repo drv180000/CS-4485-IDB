@@ -6,6 +6,7 @@
   "homepage": "https://drv180000.github.io/CS-4485-IDB/",
   "private": false,
   "proxy": "http://localhost:5000",
+  
   "scripts": {
     "dev": "next",
     "predeploy": "npm run build",

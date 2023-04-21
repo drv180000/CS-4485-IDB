@@ -35,6 +35,7 @@ const Page = () => {
     }),
     onSubmit: async (values, helpers) => {
       try {
+        //Send form data to backend
         await auth.signUp(values.email, values.name, values.password);
         const response = await fetch("http://127.0.0.1:5000/add_user", {
           method: 'POST',

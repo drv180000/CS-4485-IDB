@@ -131,6 +131,7 @@ export const AuthProvider = (props) => {
     // if (email !== 'demo@devias.io' || password !== 'Password123!') {
     //   throw new Error('Please check your email and password');
     // }
+    // Backend sends 404 error if user is not found
 
     try {
       window.sessionStorage.setItem('authenticated', 'true');
