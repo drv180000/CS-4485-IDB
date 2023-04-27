@@ -8,10 +8,12 @@ import {
   Badge,
   Box,
   IconButton,
+  Button,
   Stack,
   SvgIcon,
   Tooltip,
-  useMediaQuery
+  useMediaQuery,
+  Link
 } from '@mui/material';
 import { alpha } from '@mui/material/styles';
 import { usePopover } from 'src/hooks/use-popover';
@@ -72,32 +74,26 @@ export const TopNav = (props) => {
                 </SvgIcon>
               </IconButton>
             </Tooltip>
+            <Tooltip title="Post">
+              <Button
+                href="/post"
+                fullWidth
+                size="small"
+                sx={{ mt: 3 }}
+                type="submit"
+                variant="contained"
+              >
+                Post Question
+              </Button>
+            </Tooltip>
           </Stack>
           <Stack
             alignItems="center"
             direction="row"
             spacing={2}
           >
-            <Tooltip title="Contacts">
-              <IconButton>
-                <SvgIcon fontSize="small">
-                  <UsersIcon />
-                </SvgIcon>
-              </IconButton>
-            </Tooltip>
-            <Tooltip title="Notifications">
-              <IconButton>
-                <Badge
-                  badgeContent={4}
-                  color="success"
-                  variant="dot"
-                >
-                  <SvgIcon fontSize="small">
-                    <BellIcon />
-                  </SvgIcon>
-                </Badge>
-              </IconButton>
-            </Tooltip>
+
+
             <Avatar
               onClick={accountPopover.handleOpen}
               ref={accountPopover.anchorRef}

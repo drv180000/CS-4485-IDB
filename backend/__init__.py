@@ -9,7 +9,7 @@ def create_app():
     app = Flask(__name__)
     CORS(app)
     app.config['MONGODB_SETTINGS'] = {
-        'host': 'mongodb+srv://dbUser:ghabWU0T3Zvd9omZ@cluster0.fqjc6yb.mongodb.net/?retryWrites=true&w=majority'
+        'host': 'mongodb+srv://idbadmin:idbpassword@cluster0.ozklwjl.mongodb.net/?retryWrites=true&w=majority'
     }
     
     db.init_app(app)
