@@ -128,9 +128,10 @@ export const AuthProvider = (props) => {
   };
 
   const signIn = async (email, password) => {
-    if (email !== 'demo@devias.io' || password !== 'Password123!') {
-      throw new Error('Please check your email and password');
-    }
+    // if (email !== 'demo@devias.io' || password !== 'Password123!') {
+    //   throw new Error('Please check your email and password');
+    // }
+    // Backend sends 404 error if user is not found
 
     try {
       window.sessionStorage.setItem('authenticated', 'true');
@@ -152,7 +153,7 @@ export const AuthProvider = (props) => {
   };
 
   const signUp = async (email, name, password) => {
-    throw new Error('Sign up is not implemented');
+
   };
 
   const signOut = () => {
