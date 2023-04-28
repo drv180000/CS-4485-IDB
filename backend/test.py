@@ -5,9 +5,9 @@ from nltk.corpus import stopwords
 import string
 
 
-def question_answer(question_list, entry):
-    doc_dict = {'syllabus': '/Users/angelogonzales/Desktop/CS Project/.venv/Assignment 1.pdf', 
-                'Assignment 1': '/Users/angelogonzales/Desktop/CS Project/.venv/Syllabus.pdf'}
+def question_answer(entry):
+    doc_dict = {'syllabus': '/Users/angelogonzales/IDB/CS-4485-IDB/CS4375-Spring2023-Syllabus.pdf', 
+                'Assignment 1': '/Users/angelogonzales/IDB/CS-4485-IDB/CS4375-Spring2023-Assignment#1.pdf'}
     qa_dict = {'how hard is assignment 1?': 'its very hard',
             'do we have class tomorrow?': 'no we dont have class tomorrow',
             'can someone post the notes for class': 'here are the notes'}
@@ -27,7 +27,7 @@ def question_answer(question_list, entry):
     
     #question = "is assignment 1 hard?"
     question = entry
-    qa_list = question_list
+    # qa_list = question_list
     
     
     
@@ -74,6 +74,7 @@ def question_answer(question_list, entry):
     # if similarity is above .7 print the answer
     if(cosine > .7):
         print("From previously asked questions:", qa_dict[dict_key])
+        return qa_dict[dict_key]
 
     # else check for answer in documents
     else:
@@ -101,3 +102,4 @@ def question_answer(question_list, entry):
                 final_answer = res
             print(res)
         print("From document:", final_answer["answer"])
+        return final_answer["answer"]
