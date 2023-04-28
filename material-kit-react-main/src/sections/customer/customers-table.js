@@ -70,7 +70,7 @@ export const CustomersTable = (props) => {
                     selected={isSelected}
                   >
                     <TableCell padding="checkbox">
-                      <Button href='/settings' variant='contained'></Button>
+                      
                     </TableCell>
                     <TableCell>
                       <Stack

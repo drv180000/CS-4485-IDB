@@ -1,8 +1,11 @@
 import Head from 'next/head';
 import { useCallback, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Box, Container, Stack, Typography, TextField } from '@mui/material';
+import { Box, Container, Stack, Typography, TextField, Button, Link } from '@mui/material';
 import { Layout as DashboardLayout } from 'src/layouts/dashboard/layout';
+
+// const questionData = JSON.parse(localStorage.getItem('question'));
+// console.log(questionData)
 
 const Page = (props) => {
     const router = useRouter();
@@ -12,7 +15,7 @@ const Page = (props) => {
     async function handleSubmit(event) {
         event.preventDefault();
         console.log( 'entry:', entry); 
-        const response = await fetch("http://127.0.0.1:5000/questions", {
+        const response = await fetch("http://127.0.0.1:5000/postQuestion", {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -22,7 +25,7 @@ const Page = (props) => {
         if(response.ok) {
             console.log('response worked')
             router.push('/');
-        }
+        } 
     }
     return (
     <>
@@ -41,6 +44,7 @@ const Page = (props) => {
             <Container maxWidth="lg">
                 <Stack spacing={3}>
                     <form onSubmit={handleSubmit}>
+                        <Stack spacing={0.5}>
                         <TextField
                             value={entry}
                             id="standard-multiline-static"
@@ -51,9 +55,12 @@ const Page = (props) => {
                             onInput={e => setEntry(e.target.value)}
                         />
                         <br></br>
-                        <button type='submit'>
+                        <Box sx={{width: 1/4}}>
+                        <button onClick={handleSubmit}>
                             Submit
                         </button>
+                        </Box>
+                        </Stack>
                     </form>
 
                 </Stack>

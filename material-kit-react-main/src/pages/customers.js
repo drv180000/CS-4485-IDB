@@ -18,9 +18,9 @@ function createData(name, time, text){
   return {name, time, text};
 }
 
-const questionData = [
-  createData('Bobert Robert', time, 'Lorem ipsum this is a question or something')
-];
+ const questionData = [
+ createData()
+ ];
 
 const data = [
   {
@@ -150,10 +150,7 @@ const Page = () => {
                   </Box>
                   <TableRow>
                     <Container>
-                      <form>
-                        <Input fullWidth multiline rows={4} margin="normal" value={value} label='add text' variant='outlined' onChange={handleTextChange}/>
-                        <Button type='submit' onClick={handleTextChange}>Submit</Button>
-                      </form>
+                      
                     </Container>
                   </TableRow>
                 </TableBody>
