@@ -11,7 +11,7 @@ import MessageIcon from '@mui/icons-material/Message';
 
 export const items = [
   {
-    title: 'Overview',
+    title: 'Posts',
     path: '/',
     icon: (
       <SvgIcon fontSize="small">
@@ -28,22 +28,12 @@ export const items = [
       </SvgIcon>
     )
   },
-  
   {
     title: 'Account',
     path: '/account',
     icon: (
       <SvgIcon fontSize="small">
         <UserIcon />
-      </SvgIcon>
-    )
-  },
-  {
-    title: 'Discussion Posts',
-    path: '/settings',
-    icon: (
-      <SvgIcon fontSize="small">
-        <MessageIcon />
       </SvgIcon>
     )
   },

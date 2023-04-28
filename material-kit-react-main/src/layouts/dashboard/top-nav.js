@@ -19,6 +19,12 @@ import { alpha } from '@mui/material/styles';
 import { usePopover } from 'src/hooks/use-popover';
 import { AccountPopover } from './account-popover';
 
+// import * as React from 'react';
+// import Button from '@mui/material/Button';
+// import IconButton from '@mui/material/IconButton';
+import PhotoCamera from '@mui/icons-material/PhotoCamera';
+// import Stack from '@mui/material/Stack';
+
 const SIDE_NAV_WIDTH = 280;
 const TOP_NAV_HEIGHT = 64;
 
@@ -92,7 +98,16 @@ export const TopNav = (props) => {
             direction="row"
             spacing={2}
           >
-
+          <Stack direction="row" alignItems="center" spacing={2}>
+                <Button variant="contained" component="label">
+                  Upload
+                  <input hidden accept="image/*" multiple type="file" />
+                </Button>
+                {/* <IconButton color="primary" aria-label="upload picture" component="label">
+                  <input hidden accept="image/*" type="file" />
+                  <PhotoCamera />
+                </IconButton> */}
+              </Stack>
 
             <Avatar
               onClick={accountPopover.handleOpen}

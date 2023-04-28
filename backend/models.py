@@ -5,7 +5,5 @@ class User(db.Document):
     password = db.StringField()
 
 class Question(db.Document):
-    title = db.StringField()
-    author = db.StringField()
-    time = db.DateTimeField()
     entry = db.StringField()
+    answer = db.StringField()
